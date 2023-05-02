@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.co.orderfaz.core.base.BaseResponseModel
@@ -26,6 +27,10 @@ class TestActivity2 : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.tv_autotext)
 
         val button = findViewById<ImageButton>(R.id.toolbar_back)
+
+        val title = findViewById<TextView>(R.id.toolbar_title)
+
+        title.text = "Auto Text";
 
         button.setOnClickListener(
             View.OnClickListener {

@@ -34,7 +34,7 @@
                 android:layout_toStartOf="@+id/search_button"
                 android:layout_toEndOf="@+id/toolbar_back"
                 android:background="@null"
-                android:hint="@string/rate"
+                android:hint="@string/address"
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:paddingHorizontal="20dp"

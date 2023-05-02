@@ -63,21 +63,31 @@
             android:layout_gravity="center"
             android:focusable="true"
             android:layout_alignParentStart="true"
-            android:layout_toStartOf="@+id/kg"
+            android:layout_toStartOf="@+id/weight_spinner"
             android:hint="@string/weight"
             android:importantForAutofill="no"
             android:inputType="number" />
 
-        <TextView
-            android:id="@+id/kg"
+
+<!--        <TextView-->
+<!--            android:id="@+id/kg"-->
+<!--            style="@style/titleName"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:paddingHorizontal="10dp"-->
+<!--            android:text="@string/kilogram" />-->
+        <Spinner
+            android:id="@+id/weight_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
-            android:paddingHorizontal="10dp"
-            style="@style/titleName"
-            android:text="@string/kilogram" />
+            android:paddingHorizontal="10dp" />
     </RelativeLayout>
+
+
 
     <Button
         android:id="@+id/btn_submit"

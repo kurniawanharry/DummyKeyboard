@@ -2,6 +2,7 @@
     <string name="app_name">My Application</string>
     <string name="auto_text">Auto Text</string>
     <string name="rate">Rate</string>
+    <string name="address">Alamat</string>
     <string name="invoice">Invoice</string>
     <string name="origin">Asal</string>
     <string name="destination">Tujuan</string>
@@ -11,6 +12,7 @@
     <string name="search">Cari</string>
     <string name="copy">Copy</string>
     <string name="kilogram">Kg</string>
+    <string name="share">Share</string>
 
     <string-array name="Languages">
         <item>Java</item>
@@ -21,6 +23,11 @@
         <item>Perl</item>
         <item>Javascript</item>
         <item>Jquery</item>
+    </string-array>
+
+    <string-array name="Weight">
+        <item>Kg</item>
+        <item>g</item>
     </string-array>
 
 

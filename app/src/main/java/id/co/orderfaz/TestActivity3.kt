@@ -5,10 +5,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ProgressBar
+import android.widget.Spinner
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import id.co.orderfaz.core.base.BaseResponseModel
@@ -40,12 +43,34 @@ class TestActivity3 : AppCompatActivity() {
         val button = toolbar.findViewById<ImageButton>(R.id.toolbar_back)
         val progressBar = findViewById<ProgressBar>(R.id.progressBar)
         val buttonSubmit = findViewById<Button>(R.id.btn_submit)
+        val spinner = findViewById<Spinner>(R.id.weight_spinner)
 
         editTextOrigin = findViewById(R.id.origin_edit_text)
         editTextDestination = findViewById(R.id.destination_edit_text)
 
-
         val weight = findViewById<EditText>(R.id.weight_edit_text)
+
+        val weightList = resources.getStringArray(R.array.Weight)
+
+        val arrayAdapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,weightList)
+
+        spinner.adapter = arrayAdapter
+
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+
+        }
 
 
 
