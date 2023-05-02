@@ -1,5 +1,8 @@
 package id.co.orderfaz
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -7,6 +10,7 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.co.orderfaz.core.base.BaseResponseModel
@@ -29,6 +33,7 @@ class TestActivity2 : AppCompatActivity() {
         val button = findViewById<ImageButton>(R.id.toolbar_back)
 
         val title = findViewById<TextView>(R.id.toolbar_title)
+
 
         title.text = "Auto Text";
 
@@ -56,7 +61,6 @@ class TestActivity2 : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<BaseResponseModel<ResponseAutoText>>, t: Throwable) {
-                TODO("Not yet implemented")
             }
 
         })

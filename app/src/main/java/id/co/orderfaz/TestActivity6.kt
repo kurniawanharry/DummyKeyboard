@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.core.content.IntentCompat.getParcelableExtra
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,6 +23,10 @@ class TestActivity6 : AppCompatActivity() {
         setContentView(R.layout.keyboard_rate_result)
 
         val button = findViewById<ImageView>(R.id.toolbar_back)
+
+        val title = findViewById<TextView>(R.id.toolbar_title)
+
+        title.text = "Kurir";
 
         button.setOnClickListener(
             View.OnClickListener {

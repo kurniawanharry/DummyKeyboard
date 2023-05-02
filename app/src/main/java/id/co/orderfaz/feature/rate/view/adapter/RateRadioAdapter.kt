@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import id.co.orderfaz.R
+import id.co.orderfaz.core.util.formatThousand
 import id.co.orderfaz.feature.rate.model.LogisticDetails
 import id.co.orderfaz.feature.rate.model.ResponseRate
 
@@ -40,6 +41,7 @@ class RateRadioHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         } else {
             "${model.minDuration} - ${model.maxDuration}"
         }
-        rateName.text = "${model.price} ${model.logisticRate} ($duration ${model.durationType?.lowercase()})"
+        val price = formatThousand(model.price!!)
+        rateName.text = "$price ${model.logisticRate} ($duration ${model.durationType?.lowercase()})"
     }
 }

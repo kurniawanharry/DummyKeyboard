@@ -37,6 +37,7 @@
                 android:hint="@string/address"
                 android:importantForAutofill="no"
                 android:inputType="text"
+                style="@style/editTextStyle"
                 android:paddingHorizontal="20dp"
                 android:paddingVertical="10dp" />
 

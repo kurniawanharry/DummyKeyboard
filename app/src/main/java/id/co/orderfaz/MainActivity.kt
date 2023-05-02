@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         val myButton: Button = findViewById(R.id.autoTextButton)
         val myButton2: Button = findViewById(R.id.button2)
         val myButton3: Button = findViewById(R.id.button3)
+        val myButton4: Button = findViewById(R.id.button4)
 
         myButton.setOnClickListener {
             val intent = Intent(this, TestActivity2::class.java)
@@ -23,6 +24,10 @@ class MainActivity : AppCompatActivity() {
         }
         myButton3.setOnClickListener {
             val intent = Intent(this, TestActivity4::class.java)
+            startActivity(intent)
+        }
+        myButton4.setOnClickListener {
+            val intent = Intent(this, TestProduct::class.java)
             startActivity(intent)
         }
     }

@@ -4,6 +4,7 @@
     <string name="rate">Rate</string>
     <string name="address">Alamat</string>
     <string name="invoice">Invoice</string>
+    <string name="product">Produk</string>
     <string name="origin">Asal</string>
     <string name="destination">Tujuan</string>
     <string name="post_code">Kecamatan / Post Code</string>

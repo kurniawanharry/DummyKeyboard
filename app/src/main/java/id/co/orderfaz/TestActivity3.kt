@@ -52,7 +52,7 @@ class TestActivity3 : AppCompatActivity() {
 
         val weightList = resources.getStringArray(R.array.Weight)
 
-        val arrayAdapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,weightList)
+        val arrayAdapter = ArrayAdapter<String>(this, R.layout.spinner_weight,weightList)
 
         spinner.adapter = arrayAdapter
 
@@ -134,8 +134,11 @@ class TestActivity3 : AppCompatActivity() {
                             call: Call<BaseResponseModel<ArrayList<ResponseRate>>>,
                             response: Response<BaseResponseModel<ArrayList<ResponseRate>>>
                         ) {
-                            checkResult(response.body()?.data)
-                            progressBar.visibility = View.INVISIBLE
+                            Log.d("RESPONSE CODE", response.body()?.statusCode.toString())
+                            if(response.body()?.statusCode == 200){
+                                checkResult(response.body()?.data)
+                                progressBar.visibility = View.INVISIBLE
+                            }
                         }
 
                         override fun onFailure(call: Call<BaseResponseModel<ArrayList<ResponseRate>>>, t: Throwable) {

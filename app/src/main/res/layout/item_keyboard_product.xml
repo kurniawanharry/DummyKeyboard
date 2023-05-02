@@ -4,50 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <RelativeLayout
-        android:id="@+id/tv_product"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingHorizontal="20dp"
-        android:paddingVertical="10dp">
+        android:paddingVertical="5dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:layout_alignParentStart="true">
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="20dp"
+            android:elevation="0dp"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true"
+            android:layout_toStartOf="@+id/share_button">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:padding="10dp">
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/image"
-                    android:layout_width="50dp"
+                    android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:src="@drawable/ic_launcher_background"
+                    app:shapeAppearanceOverlay="@style/roundedCorner"
+                    android:layout_centerVertical="true"
+                    />
+
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/image"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="10dp">
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true">
 
                     <TextView
-                        android:id="@+id/tv_item_keyboard_main"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/product_title"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#000000"
-                        android:textFontWeight="600"
+                        style="@style/normalText"
+                        android:paddingBottom="5dp"
                         tools:text="Title" />
 
                     <TextView
-                        android:id="@+id/tv_item_keyboard_subtitle"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/product_subtitle"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv_item_keyboard_main"
-                        android:textColor="#000000"
+                        android:layout_below="@+id/product_title"
+                        style="@style/normalText"
                         tools:text="Subtitle" />
 
                 </RelativeLayout>
@@ -56,13 +65,15 @@
 
         </androidx.cardview.widget.CardView>
 
-<!--        <Button-->
-<!--            android:id="@+id/share_button"-->
-<!--            android:layout_width="50dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_alignParentEnd="true"-->
-<!--            android:layout_toEndOf="@+id/cardView"-->
-<!--            android:text="@string/share" />-->
+        <ImageButton
+            android:id="@+id/share_button"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_share"
+            android:background="@drawable/round_square_shape"
+            android:importantForAccessibility="no" />
 
 
     </RelativeLayout>
